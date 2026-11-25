@@ -9,6 +9,7 @@ export const PERSONAL_INFO = {
   linkedin: 'https://linkedin.com/in/zaryab-ghumman',
   github: 'https://github.com/Zaryabghumman2003-debug',
   vantraosUrl: 'https://vantraos.com',
+  photoUrl: '/profile.jpg',
   cvPdfUrl: null,
   hero: {
     headline: 'Building Technology. Leading Innovation. Creating Impact.',
