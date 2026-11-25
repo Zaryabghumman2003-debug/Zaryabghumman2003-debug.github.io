@@ -33,8 +33,7 @@ export default function GitHubReposSection() {
   const [activeTab, setActiveTab] = useState('All');
   const [query, setQuery] = useState('');
 
-  const fetchRepos = useCallback(async () => {
-    setSyncState('loading');
+  const loadReposFromGitHub = useCallback(async () => {
     try {
       const res = await fetch(
         `https://api.github.com/users/${GITHUB_CONFIG.username}/repos?sort=updated&per_page=100`,
@@ -67,17 +66,30 @@ export default function GitHubReposSection() {
           };
         });
 
-      setRepos(formatted);
-      setSyncState('live');
+      return { ok: true, repos: formatted };
     } catch {
-      setRepos(GITHUB_CONFIG.fallbackRepos);
-      setSyncState('fallback');
+      return { ok: false, repos: GITHUB_CONFIG.fallbackRepos };
     }
   }, []);
 
   useEffect(() => {
-    fetchRepos();
-  }, [fetchRepos]);
+    let active = true;
+    loadReposFromGitHub().then((result) => {
+      if (!active) return;
+      setRepos(result.repos);
+      setSyncState(result.ok ? 'live' : 'fallback');
+    });
+    return () => {
+      active = false;
+    };
+  }, [loadReposFromGitHub]);
+
+  const handleRefresh = async () => {
+    setSyncState('loading');
+    const result = await loadReposFromGitHub();
+    setRepos(result.repos);
+    setSyncState(result.ok ? 'live' : 'fallback');
+  };
 
   const filtered = repos.filter((repo) => {
     const matchesTab = activeTab === 'All' || repo.category === activeTab;
@@ -137,7 +149,7 @@ export default function GitHubReposSection() {
 
             <button
               type="button"
-              onClick={fetchRepos}
+              onClick={handleRefresh}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-white/15 bg-white/[0.04] hover:bg-white/[0.08] text-xs font-medium text-slate-200 cursor-pointer"
             >
               <RefreshCw className={`w-3.5 h-3.5 ${syncState === 'loading' ? 'animate-spin' : ''}`} />
