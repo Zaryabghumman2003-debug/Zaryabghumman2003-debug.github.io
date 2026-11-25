@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    background-color: #07080d;
+    color: #e2e8f0;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Subtle architectural grid background */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Glass panel surface */
+.glass-card {
+  background: linear-gradient(180deg, rgba(18, 22, 34, 0.78) 0%, rgba(12, 15, 24, 0.9) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.glass-card-hover {
+  transition: transform 0.28s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-3px);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 20px 40px -20px rgba(56, 189, 248, 0.16), 0 0 0 1px rgba(99, 102, 241, 0.18);
+}
+
+/* Reveal on scroll */
+.reveal-section {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-section {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Print styles for CV modal */
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #cv-printable-area,
+  #cv-printable-area * {
+    visibility: visible !important;
+  }
+  #cv-printable-area {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    padding: 24px !important;
+    box-shadow: none !important;
+    border: none !important;
+  }
+}
