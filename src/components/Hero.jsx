@@ -161,13 +161,13 @@ export default function Hero({ onOpenCV }) {
               />
 
               {/* Portrait Frame */}
-              <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#090c14] aspect-[4/3] flex items-center justify-center">
+              <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#090c14] h-80 sm:h-[340px] flex items-center justify-center">
                 {!photoMissing ? (
                   <img
                     src={PERSONAL_INFO.photoUrl}
                     alt={`${PERSONAL_INFO.name} portrait`}
                     onError={() => setPhotoMissing(true)}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[50%_15%]"
                   />
                 ) : (
                   <div className="flex flex-col items-center justify-center text-center p-6 space-y-2">
