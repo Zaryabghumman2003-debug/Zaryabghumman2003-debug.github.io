@@ -1,36 +1,28 @@
-/**
- * Central Business Portfolio Data Configuration
- * ---------------------------------------------
- * Edit values marked with [Editable] to customize dates, repository links,
- * or drop a static PDF at /public/Zaryab-Naveed-Ghuman-CV.pdf and set cvPdfUrl.
- */
-
 export const PERSONAL_INFO = {
   name: 'Zaryab Naveed Ghuman',
   shortName: 'Zaryab Ghuman',
   location: 'Karachi, Pakistan',
-  title: 'Technology Entrepreneur | Software Solutions Partner | Core Team Member at VantraOS',
+  title: 'Technology Entrepreneur | Software Solutions Partner | VantraOS',
   positioning:
-    'I help businesses and startups turn operational bottlenecks into scalable software products—combining full-stack engineering, AI integration, and practical product execution.',
+    'Building scalable web platforms, SaaS systems, and AI-enabled products for startups and businesses.',
   email: 'Zaryabghumman2003@gmail.com',
   linkedin: 'https://linkedin.com/in/zaryab-ghumman',
   github: 'https://github.com/Zaryabghumman2003-debug',
   vantraosUrl: 'https://vantraos.com',
-  // [Editable] Optional direct PDF path in /public; if null, opens printable/downloadable CV view
   cvPdfUrl: null,
   hero: {
     headline: 'Building Technology. Leading Innovation. Creating Impact.',
     subheading:
-      "I'm Zaryab Naveed Ghuman — Technology Entrepreneur, Software Developer, and Core Team Member at VantraOS. I partner with founders and businesses to build practical web platforms, SaaS workflows, and AI-enabled solutions.",
+      "I'm Zaryab Naveed Ghuman — Technology Entrepreneur, Software Developer, and Core Team Member at VantraOS, partnering with businesses to ship practical digital products.",
     rotatingFocus: [
-      'B2B SaaS & Operational Platforms (VantraOS)',
-      'Custom Web Apps & Marketplaces (Kaamify)',
+      'B2B SaaS Platforms (VantraOS)',
+      'Marketplaces & Web Apps (Kaamify)',
       'AI & Computer Vision Automation',
-      'Startup Execution in Karachi (NASTP / DUET RPDU)',
+      'NASTP / DUET RPDU Ecosystem',
     ],
     identityLabels: [
       { label: 'Software Developer — VantraOS', accent: 'indigo' },
-      { label: 'Startup Ecosystem — NASTP / DUET RPDU', accent: 'sky' },
+      { label: 'NASTP / DUET RPDU', accent: 'sky' },
       { label: 'B2B Web, SaaS & AI Solutions', accent: 'violet' },
     ],
   },
@@ -39,50 +31,46 @@ export const PERSONAL_INFO = {
 export const BUSINESS_SERVICES = [
   {
     id: 'saas-web',
-    title: 'Custom SaaS & Business Web Platforms',
-    audience: 'For Startups, SMEs & Operations Teams',
+    title: 'Custom SaaS & Web Platforms',
+    audience: 'Startups & SMEs',
     summary:
-      'End-to-end architecture and frontend/backend engineering for multi-tenant platforms, client portals, quotation engines, and workflow automation tools.',
+      'End-to-end engineering for multi-tenant platforms, client portals, and automated business workflows.',
     deliverables: [
-      'Responsive React, Next.js & PHP/Python web systems',
-      'Role-based dashboards, reporting & JSON/PDF workflows',
-      'Clean UI/UX built for conversion and daily team speed',
+      'React, Next.js, PHP & Python web apps',
+      'Role-based dashboards & PDF/JSON workflows',
     ],
   },
   {
     id: 'marketplaces',
-    title: 'Marketplaces & Service Booking Platforms',
-    audience: 'For Local Ventures & Service Brands',
+    title: 'Marketplaces & Booking Systems',
+    audience: 'Service Ventures',
     summary:
-      'Structured discovery catalogs, provider directories, gated-community service flows, and customer booking journeys tailored for regional businesses.',
+      'Service catalogs, provider directories, and location-filtered booking platforms built for local commerce.',
     deliverables: [
-      'Service catalogs, search & location-based filtering',
-      'Provider profiles, lead capture & admin control views',
-      'Scalable database modeling with MySQL, MongoDB & Supabase/Firebase',
+      'Search, catalogs & society/zone discovery',
+      'MySQL, MongoDB & Supabase backends',
     ],
   },
   {
     id: 'ai-cv',
-    title: 'AI Integration & Computer Vision Systems',
-    audience: 'For Automation & Smart Product Teams',
+    title: 'AI & Computer Vision',
+    audience: 'Automation Teams',
     summary:
-      'Practical integration of computer vision pipelines and AI-assisted workflows into real business and academic tools.',
+      'Applied computer vision and AI-assisted scheduling integrated directly into web and Python systems.',
     deliverables: [
-      'Object detection & video analytics with Python, YOLO & OpenCV',
-      'AI-assisted scheduling, productivity & companion interfaces',
-      'Modular Python APIs ready for product integration',
+      'Python, YOLO & OpenCV detection pipelines',
+      'AI-powered productivity & assistant modules',
     ],
   },
   {
     id: 'digital-presence',
-    title: 'Corporate Websites & Operations Tooling',
-    audience: 'For Growing Companies & Institutions',
+    title: 'Corporate Sites & Ops Tooling',
+    audience: 'Growing Companies',
     summary:
-      'High-credibility digital presence, WordPress/custom brand sites, and internal compliance or task-management tools.',
+      'Fast, SEO-ready brand websites, WordPress deployments, and internal compliance or task trackers.',
     deliverables: [
-      'Fast, SEO-optimized corporate & founder landing pages',
-      'WordPress & Oracle APEX business data applications',
-      'Compliance, audit checklists & internal task trackers',
+      'SEO-ready corporate & founder websites',
+      'WordPress & Oracle APEX business dashboards',
     ],
   },
 ];
@@ -91,140 +79,127 @@ export const ENGAGEMENT_MODEL = {
   steps: [
     {
       step: '01',
-      title: 'Discovery & Business Scope',
-      detail:
-        'Align on operational pain points, target users, core deliverables, and realistic launch milestones before writing production code.',
+      title: 'Scope & Strategy',
+      detail: 'Define business goals, user workflows, and launch milestones.',
     },
     {
       step: '02',
-      title: 'Architecture & Interactive UI',
-      detail:
-        'Define data models, security boundaries, and clean user journeys so stakeholders validate workflows early.',
+      title: 'Architecture & UI',
+      detail: 'Design data models, security boundaries, and clean interfaces.',
     },
     {
       step: '03',
-      title: 'Iterative Build & Integration',
-      detail:
-        'Ship clean, modular software in structured sprints with GitHub version control and transparent progress tracking.',
+      title: 'Sprint Delivery',
+      detail: 'Build in modular sprints tracked via GitHub.',
     },
     {
       step: '04',
-      title: 'Deployment & Growth Support',
-      detail:
-        'Launch production-ready builds with documentation, handover clarity, and ongoing feature iteration as business needs evolve.',
+      title: 'Launch & Scale',
+      detail: 'Deploy to production with clean handover and iteration.',
     },
   ],
   models: [
     {
       name: 'MVP & Product Build',
-      tag: 'Startups & Founders',
-      detail: 'Take a new digital product or SaaS concept from structured scope to a deployed, testable platform.',
+      tag: 'Startups',
+      detail: 'From concept to a deployed, testable SaaS or web product.',
     },
     {
       name: 'Business Web & Systems',
-      tag: 'SMEs & Agencies',
-      detail: 'Build custom company websites, service portals, compliance trackers, or database-backed internal dashboards.',
+      tag: 'SMEs',
+      detail: 'Company websites, service portals, and internal dashboards.',
     },
     {
-      name: 'Dedicated Engineering Support',
-      tag: 'Product Teams',
-      detail: 'Collaborate directly with your technical or startup team on frontend, backend, or AI module delivery.',
+      name: 'Engineering Partner',
+      tag: 'Teams',
+      detail: 'Hands-on frontend, backend, or AI module delivery.',
     },
   ],
 };
 
 export const VANTRAOS_DATA = {
   name: 'VantraOS',
-  tagline: 'Enterprise Cloud Operating System for Modern Banquets, Luxury Caterers & Hospitality Operations',
+  tagline: 'Cloud Operating System for Modern Banquets, Caterers & Hospitality Operations',
   website: 'https://vantraos.com',
   role: 'Software Developer & Core Team Member',
-  ecosystems: [
-    'NASTP (National Aerospace Science & Technology Park)',
-    'DUET RPDU Office (Research, Planning & Development Unit)',
-  ],
+  ecosystems: ['NASTP', 'DUET RPDU Office'],
   status: 'Deployed Production Platform',
   overview:
-    'VantraOS is a live, cloud-based operational supply chain platform built specifically for modern banquets, luxury caterers, and large-scale hospitality businesses. Rather than acting as a basic point-of-sale or receipt tool, it unifies event pipelines, recipe costing, multi-branch operations, and multi-wallet financial tracking in one secure system.',
+    'A live cloud operational platform for modern banquets and luxury caterers—unifying event pipelines, recipe costing, multi-branch operations, and multi-wallet accounting.',
   personalJourney:
-    'Working as a Software Developer and Core Team Member at VantraOS within the NASTP and DUET RPDU startup ecosystem has given me direct exposure to taking a real-world software product from engineering workflows to deployed business usage—balancing technical reliability, domain requirements, and product scaling.',
+    'Contributing as Software Developer & Core Team Member within the NASTP and DUET RPDU ecosystem across production engineering and scaling workflows.',
   perspectives: [
     {
-      title: 'Product Engineering for Real Operations',
-      detail:
-        'Designing software for high-velocity hospitality workflows means replacing fragmented spreadsheets with structured pipelines, reliable calculations, and clear operational accountability.',
+      title: 'Operational Precision',
+      detail: 'Replacing fragmented hospitality spreadsheets with structured digital pipelines.',
     },
     {
-      title: 'Navigating Startup Execution',
-      detail:
-        'Contributing within NASTP and DUET RPDU highlighted the realities of shipping production software: aligning engineering priorities with customer workflows, security expectations, and iterative growth.',
+      title: 'Production Execution',
+      detail: 'Aligning code quality with real customer workflows inside NASTP & DUET RPDU.',
     },
     {
-      title: 'From Product to Market Growth',
-      detail:
-        'Beyond writing code, participating in a live startup environment bridges product architecture with business strategy, onboarding realities, and long-term scalability.',
+      title: 'Product Scaling',
+      detail: 'Bridging engineering reliability with onboarding and market growth.',
     },
   ],
   verifiedModules: [
     {
       id: 'pipeline',
-      name: 'Unified Event Pipeline & Quote Engine',
+      name: 'Event Pipeline & Quote Engine',
       summary:
-        'Converts client leads into branded PDF proposals with tiered guest counts, custom packages, and automated tax calculations in under 90 seconds, flowing directly into invoices and kitchen production sheets.',
+        'Turns leads into branded PDF proposals with tiered guest counts and auto-tax in under 90 seconds, converting directly into invoices and kitchen sheets.',
       highlights: [
-        'Lead-to-proposal workflow under 90s',
-        'Tiered guest counts & custom menu packages',
-        'One-click conversion to invoices & kitchen sheets',
+        'Under-90s PDF proposal flow',
+        'Tiered guest & menu packages',
+        'One-click invoice & kitchen sync',
       ],
     },
     {
       id: 'costing',
-      name: 'Live Recipe Costing & Vendor Sheets',
+      name: 'Live Recipe Costing & Vendors',
       summary:
-        'Connects kitchen recipes, raw ingredient tracking, and vendor pricing directly to event quotes so hospitality teams can protect operating margins and eliminate estimation errors.',
+        'Links kitchen recipes, ingredient quantities, and vendor pricing directly to event quotes to protect margins.',
       highlights: [
         'Ingredient-level recipe costing',
-        'Vendor sheet tracking & procurement alignment',
-        'Margin visibility against event billing',
+        'Vendor sheet price tracking',
+        'Real-time event margin control',
       ],
     },
     {
       id: 'multitenant',
-      name: 'Multi-Tenant Branch Architecture',
+      name: 'Multi-Tenant Branch Control',
       summary:
-        'Isolates branch inventories, kitchen production sheets, and operating wallets via strict tenant domain routing and schema isolation while consolidating executive P&L views.',
+        'Isolates branch inventories, kitchen sheets, and operating wallets via strict schema separation while unifying executive P&L.',
       highlights: [
-        'Per-branch inventory & kitchen sheet isolation',
-        'Strict tenant domain routing & schema separation',
-        'Consolidated executive P&L and monthly closings',
+        'Per-branch inventory isolation',
+        'Strict tenant domain routing',
+        'Consolidated executive P&L',
       ],
     },
     {
       id: 'wallets',
-      name: 'Multi-Wallet Accounting & Security',
+      name: 'Multi-Wallet & Security',
       summary:
-        'Supports receivables tracking and custom profit-split structures across owners, partners, and sales teams, backed by Argon2id hashing, token revocation, and 256-bit SSL encryption.',
+        'Handles receivables and custom profit splits across owners and sales teams, secured with Argon2id hashing and 256-bit SSL.',
       highlights: [
-        'Multi-wallet financial & receivables tracking',
-        'Configurable owner, partner & sales profit splits',
-        'Argon2id hashing & token revocation controls',
+        'Multi-wallet receivables tracking',
+        'Custom partner profit splits',
+        'Argon2id & token revocation',
       ],
     },
   ],
-  screenshotNote:
-    'Interactive module preview built from verified vantraos.com product documentation. Replace or augment with local screenshots anytime in portfolioData.js.',
 };
 
 export const ABOUT_DATA = {
   paragraphs: [
-    "I'm a Computer Science undergraduate at Dawood University of Engineering and Technology (DUET) in Karachi (2024–2028) and a Software Developer & Core Team Member at VantraOS.",
-    'My work sits at the intersection of software engineering and startup execution. Being active within the NASTP startup ecosystem and DUET RPDU Office has shaped how I approach technology—not just as code in isolation, but as practical systems designed to solve real operational and business problems.',
-    'Across B2B startup work, marketplace builds, internships, and technical projects, I focus on full-stack web development, AI and computer vision integration, and delivering dependable digital products with measurable business utility.',
+    "I'm a Computer Science undergraduate at DUET (2024–2028) and Software Developer & Core Team Member at VantraOS in Karachi.",
+    'Working inside NASTP and DUET RPDU shaped my focus on practical software—building web platforms, marketplaces, and AI systems that solve real business bottlenecks.',
   ],
   highlights: [
-    { label: 'Location', value: 'Karachi, Pakistan (Available for Remote & Local Engagements)' },
-    { label: 'Startup Role', value: 'Software Developer & Core Team Member — VantraOS' },
+    { label: 'Location', value: 'Karachi, Pakistan' },
+    { label: 'Venture Role', value: 'Software Developer & Core Team Member — VantraOS' },
     { label: 'Ecosystem', value: 'NASTP & DUET RPDU Office' },
-    { label: 'Education', value: 'BS Computer Science — DUET (2024–2028 Expected)' },
+    { label: 'Education', value: 'BS Computer Science — DUET (2024–2028)' },
   ],
 };
 
@@ -233,33 +208,29 @@ export const STARTUP_JOURNEY = [
     step: '01',
     title: 'Startup Ecosystem',
     subtitle: 'NASTP & DUET RPDU',
-    description:
-      'Immersed in the startup and innovation environment across NASTP and the DUET Research, Planning & Development Unit (RPDU), collaborating around product thinking, technical execution, and industry problem-solving.',
-    status: 'Ecosystem Foundation',
+    description: 'Product thinking and technical collaboration inside Karachi’s startup ecosystem.',
+    status: 'Foundation',
   },
   {
     step: '02',
-    title: 'Building a Technology Product',
-    subtitle: 'VantraOS Product Development & Deployment',
-    description:
-      'Engaged in the development and deployment of VantraOS—an enterprise cloud platform tailored to solve operational, costing, and financial leakage challenges in modern banquet and hospitality operations.',
-    status: 'Production Product',
+    title: 'Product Engineering',
+    subtitle: 'VantraOS Platform',
+    description: 'Developing and deploying cloud software for hospitality and catering operations.',
+    status: 'Production',
   },
   {
     step: '03',
-    title: 'Core Product & Engineering Role',
-    subtitle: 'Software Developer & Core Team Member',
-    description:
-      'Contributing to software development and product workflows at VantraOS, bridging technical implementation with real-world operational requirements alongside the founding and product team.',
-    status: 'Active Role',
+    title: 'Core Team Role',
+    subtitle: 'Software Developer',
+    description: 'Bridging software implementation with real operational workflows at VantraOS.',
+    status: 'Active',
   },
   {
     step: '04',
     title: 'Growth & Scaling',
-    subtitle: 'Expanding Product & Market Presence',
-    description:
-      'Focused on strengthening engineering reliability, refining user workflows, and supporting the ambition of scaling VantraOS to serve broader enterprise hospitality operations.',
-    status: 'Ongoing Ambition',
+    subtitle: 'Market Expansion',
+    description: 'Focused on reliability and scaling VantraOS to broader enterprise teams.',
+    status: 'Ambition',
   },
 ];
 
@@ -267,60 +238,55 @@ export const EXPERIENCE_DATA = [
   {
     role: 'Software Developer & Core Team Member',
     organization: 'VantraOS',
-    context: 'NASTP / DUET RPDU Ecosystem',
-    period: 'Active — [Editable Dates]',
+    context: 'NASTP / DUET RPDU',
+    period: 'Active',
     type: 'Featured Startup Role',
     featured: true,
     description:
-      'Contributing to product development and scaling workflows for a deployed cloud operating system serving modern banquet and hospitality operations.',
+      'Product development and scaling workflows for a deployed hospitality cloud operating system.',
     highlights: [
-      'Working on real-world product engineering and feature delivery within a live SaaS environment.',
-      'Collaborating inside the NASTP and DUET RPDU startup ecosystem.',
-      'Aligning software implementation with practical business and operational requirements.',
+      'Feature engineering in a live multi-tenant SaaS environment.',
+      'Aligning product delivery with business operations at NASTP / DUET RPDU.',
     ],
   },
   {
     role: 'Web Development Intern',
     organization: 'Coretech Innovations',
-    context: 'Web Engineering Internship',
-    period: '2026 — [Editable Exact Dates]',
+    context: 'Web Engineering',
+    period: '2026',
     type: 'Internship',
     featured: false,
     repoUrl: 'https://github.com/Zaryabghumman2003-debug/-coretech-web-internship',
     description:
-      'Completed structured web development sprint tasks covering semantic HTML, responsive CSS Flexbox/Grid layouts, and Git/GitHub engineering workflows.',
+      'Delivered semantic HTML, responsive CSS Flexbox/Grid layouts, and Git/GitHub sprint tasks.',
     highlights: [
-      'Built responsive web portfolio interfaces using semantic HTML5 and modular CSS layouts.',
-      'Practiced disciplined Git branching, commits, and documentation workflows.',
-      'Awarded Web Development Internship Certificate upon completion.',
+      'Responsive portfolio UI & Git workflow certification.',
     ],
   },
   {
     role: 'Intern',
     organization: 'Provincial Ombudsman Sindh',
-    context: 'Public Sector / Institutional Internship',
-    period: '[Editable Dates]',
+    context: 'Institutional Operations',
+    period: 'Internship',
     type: 'Internship',
     featured: false,
     description:
-      'Gained institutional and administrative technology exposure supporting digital workflows and office operations.',
+      'Supported digital documentation and administrative workflows in a public-sector office.',
     highlights: [
-      'Supported day-to-day operational and documentation processes in a formal public-sector environment.',
-      'Strengthened professional communication, reporting, and organizational discipline.',
+      'Operational reporting and structured office systems support.',
     ],
   },
   {
     role: 'IT Intern',
     organization: 'Alkhidmat Karachi',
-    context: 'Information Technology & Operations',
-    period: '[Editable Dates]',
+    context: 'IT & Operations',
+    period: 'Internship',
     type: 'Internship',
     featured: false,
     description:
-      'Contributed to IT support and technical operations within one of Karachi’s largest social welfare organizations.',
+      'Assisted with IT infrastructure, troubleshooting, and operational technology support.',
     highlights: [
-      'Assisted with IT infrastructure, troubleshooting, and operational systems support.',
-      'Applied technical problem-solving in a fast-paced community and organizational setting.',
+      'Hands-on technical support across daily organizational systems.',
     ],
   },
 ];
@@ -329,184 +295,165 @@ export const PROJECTS_DATA = [
   {
     id: 'kaamify',
     title: 'Kaamify Web Platform',
-    subtitle: 'Gated-Community Home Services Marketplace',
-    category: 'Marketplace & Local Commerce',
+    subtitle: 'Home Services Marketplace',
+    category: 'Marketplace',
     businessValue:
-      'Connects residents in Karachi gated communities with verified technicians through structured society-level service discovery.',
+      'Connects Karachi gated communities with verified technicians via structured society discovery.',
     description:
-      'Full-stack web platform for Karachi’s gated-community home services marketplace (Naya Nazimabad, Saima Arabian Villas, Gulshan-e-Iqbal, DHA), featuring society explorers, service catalogs, and verified provider directories.',
-    stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Supabase SSR'],
+      'Next.js 15 & Supabase marketplace featuring society explorers, service catalogs, and provider directories.',
+    stack: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'Supabase'],
     githubUrl: 'https://github.com/Zaryabghumman2003-debug/Kaamify-Web',
-    repoStatus: 'Public GitHub Repository',
     highlights: [
-      'Society-targeted discovery routes (/services, /societies, /providers, /search).',
-      'Clean B2C marketplace structure designed for trust and rapid service booking.',
-      'Built on Next.js App Router with Supabase SSR architecture.',
+      'Society-level discovery (/services, /societies, /providers).',
+      'Built for trust and rapid technician booking.',
     ],
-    accent: 'sky',
   },
   {
     id: 'regulariq',
     title: 'RegularIQ',
-    subtitle: 'Compliance Management Application',
-    category: 'Enterprise & Compliance',
+    subtitle: 'Compliance Management App',
+    category: 'Enterprise Ops',
     businessValue:
-      'Helps organizations centralize regulatory checklists, reduce manual audit gaps, and maintain clear operational accountability.',
+      'Centralizes regulatory checklists and reduces manual compliance audit gaps.',
     description:
-      'A structured compliance management application designed to help organizations organize regulatory tracking, checklists, and operational compliance workflows cleanly.',
-    stack: ['Web Application', 'Compliance Workflows', 'Database Management'],
-    githubUrl: null, // [Editable] Add GitHub URL when public
-    repoStatus: 'Repository Link Editable in portfolioData.js',
+      'Structured compliance management application for organizing regulatory tracking and audits.',
+    stack: ['Web App', 'Compliance', 'Database'],
+    githubUrl: null,
     highlights: [
-      'Centralized compliance tracking and structured checklist organization.',
-      'Built to reduce manual oversight gaps in operational compliance workflows.',
-      'Clean dashboard-driven presentation for rapid status review.',
+      'Centralized checklist tracking and audit status review.',
+      'Designed for clear operational accountability.',
     ],
-    accent: 'indigo',
   },
   {
     id: 'taskflow',
     title: 'TaskFlow',
-    subtitle: 'Task & Workflow Management Platform',
-    category: 'Operations & Productivity',
+    subtitle: 'Task Management Web App',
+    category: 'Productivity',
     businessValue:
-      'Equips teams and professionals with priority analytics, workflow charts, and portable JSON backup without server friction.',
+      'Delivers priority analytics, workflow charts, and portable JSON backup with zero server friction.',
     description:
-      'A full-featured task management web application featuring authentication flows, an analytics dashboard with priority distribution, inline task editing, and JSON data portability.',
+      'Task manager with auth flows, priority distribution dashboard, inline edits, and JSON import/export.',
     stack: ['HTML5', 'CSS3', 'JavaScript', 'localStorage'],
     githubUrl: 'https://github.com/Zaryabghumman2003-debug/Portfolio-Task-Flow-APP',
-    repoStatus: 'Public GitHub Repository',
     highlights: [
-      'Dashboard with total/completed/pending/overdue counters and progress ring.',
-      'Full CRUD with real-time search, priority/status filters, and keyboard shortcuts (Ctrl+N, Ctrl+/).',
-      'Dark/light mode toggle plus JSON export and import for persistent local storage.',
+      'Analytics cards, progress ring, and keyboard shortcuts (Ctrl+N, Ctrl+/).',
+      'Dark/light theme and JSON export/import persistence.',
     ],
-    accent: 'violet',
   },
   {
     id: 'nexus',
     title: 'Nexus (Sonic Nexus)',
-    subtitle: 'Community & Social Platform Prototype',
-    category: 'Scalable Frontend Architecture',
+    subtitle: 'Social Platform Prototype',
+    category: 'Web Architecture',
     businessValue:
-      'Demonstrates full community engagement infrastructure—feeds, interactive polls, messaging, moderation, and monetization UI.',
+      'Full community architecture with feeds, polls, messaging, moderation, and an in-app AI companion.',
     description:
-      'Modern social networking platform prototype built with React and Tailwind CSS featuring a dynamic feed, stories, interactive polls, messaging, an in-app AI companion, and moderation panels.',
-    stack: ['React', 'Tailwind CSS', 'JavaScript', 'Lucide Icons'],
+      'React & Tailwind social network prototype powered by Context + useReducer state architecture.',
+    stack: ['React', 'Tailwind CSS', 'JavaScript'],
     githubUrl: 'https://github.com/Zaryabghumman2003-debug/Nexus-Social-Media-App',
-    repoStatus: 'Public GitHub Repository',
     highlights: [
-      'Centralized React Context + useReducer state architecture.',
-      'Includes feeds, user profiles, polls, stories, real-time-style messaging, and media editing.',
-      'Integrated in-app AI companion, content moderation, and security UI panels.',
+      'Feeds, stories, polls, messaging, and media editor.',
+      'Integrated AI companion and moderation UI.',
     ],
-    accent: 'cyan',
   },
   {
     id: 'object-detection',
     title: 'Object Detection System',
-    subtitle: 'Real-Time Computer Vision Pipeline',
-    category: 'AI & Computer Vision',
+    subtitle: 'Computer Vision Pipeline',
+    category: 'AI & Vision',
     businessValue:
-      'Provides automated visual detection and frame-level annotation adaptable to retail, security, or operational monitoring workflows.',
+      'Automates visual object detection and annotation for monitoring and analytics workflows.',
     description:
-      'Computer vision application built with Python, YOLO, and OpenCV to detect, classify, and annotate objects across visual feeds with bounding-box inference.',
+      'Real-time bounding-box detection pipeline built with Python, YOLO, and OpenCV.',
     stack: ['Python', 'YOLO', 'OpenCV'],
     githubUrl: 'https://github.com/Zaryabghumman2003-debug/Object-detection-System',
-    repoStatus: 'Public GitHub Repository',
     highlights: [
-      'Integrates YOLO object detection models with OpenCV frame processing.',
-      'Real-time bounding box visualization and class confidence labeling.',
-      'Modular Python codebase ready for webcam or video-stream inputs.',
+      'YOLO inference integrated with OpenCV frame capture.',
+      'Modular Python script for live camera or video feeds.',
     ],
-    accent: 'sky',
   },
   {
     id: 'smart-study-planner',
     title: 'Smart Study Planner',
-    subtitle: 'AI-Assisted Planning & Scheduling',
+    subtitle: 'AI-Assisted Scheduling',
     category: 'AI Integration',
     businessValue:
-      'Applies AI-assisted scheduling logic to break down complex timelines into structured, actionable daily execution blocks.',
+      'Breaks complex timelines into structured, AI-organized daily execution blocks.',
     description:
-      'An intelligent planning application incorporating AI-assisted scheduling and organization to structure coursework, deadlines, and preparation plans.',
+      'AI-assisted study and timeline planner for organizing coursework and exam preparation.',
     stack: ['AI Integration', 'JavaScript', 'Web UI'],
-    githubUrl: null, // [Editable] Add GitHub URL when public
-    repoStatus: 'Repository Link Editable in portfolioData.js',
+    githubUrl: null,
     highlights: [
-      'AI-supported plan structuring around subjects and target timelines.',
-      'Focuses on actionable daily sessions and clear prioritization.',
-      'Clean interface designed for consistent daily execution.',
+      'Priority-balanced daily schedule generation.',
+      'Clean layout focused on daily consistency.',
     ],
-    accent: 'emerald',
   },
 ];
 
 export const GITHUB_CONFIG = {
   username: 'Zaryabghumman2003-debug',
   profileUrl: 'https://github.com/Zaryabghumman2003-debug',
-  // Verified public repositories from GitHub API used as instant initial/fallback data
   fallbackRepos: [
     {
       name: 'Kaamify-Web',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Kaamify-Web',
-      description: 'Karachi gated-community home services marketplace built with Next.js 15, TypeScript, Tailwind CSS & Supabase.',
+      description: 'Karachi gated-community home services marketplace (Next.js 15, TypeScript, Supabase).',
       language: 'TypeScript',
       category: 'Business & SaaS',
     },
     {
       name: 'Brand-Builder',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Brand-Builder',
-      description: 'Building our brands — brand development web application with Vite, TypeScript & server integration.',
+      description: 'Brand development web application built with Vite and TypeScript.',
       language: 'TypeScript',
       category: 'Business & SaaS',
     },
     {
       name: 'Data-Visualizer',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Data-Visualizer',
-      description: 'Visualization of Data — interactive analytics & charting web application.',
+      description: 'Interactive data visualization and analytics web application.',
       language: 'TypeScript',
       category: 'Business & SaaS',
     },
     {
       name: 'Portfolio-Task-Flow-APP',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Portfolio-Task-Flow-APP',
-      description: 'TaskFlow — Complete task management web application with analytics dashboard & JSON sync.',
+      description: 'TaskFlow — Task management web app with analytics dashboard and JSON sync.',
       language: 'JavaScript',
       category: 'Business & SaaS',
     },
     {
       name: 'Nexus-Social-Media-App',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Nexus-Social-Media-App',
-      description: 'Sonic Nexus — Full social platform prototype with feed, polls, messaging & AI companion.',
+      description: 'Sonic Nexus — React social platform prototype with feed, polls, chat & AI companion.',
       language: 'JavaScript',
       category: 'Web & UI',
     },
     {
       name: 'Tie-Breaker',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Tie-Breaker',
-      description: 'A decision-making web application built with Vite, TypeScript & server backend.',
+      description: 'Decision-making web app built with Vite and TypeScript.',
       language: 'TypeScript',
       category: 'Web & UI',
     },
     {
       name: 'Object-detection-System',
       html_url: 'https://github.com/Zaryabghumman2003-debug/Object-detection-System',
-      description: 'Real-time object detection pipeline built with Python, YOLO, and OpenCV.',
+      description: 'Real-time object detection pipeline using Python, YOLO, and OpenCV.',
       language: 'Python',
       category: 'AI & Systems',
     },
     {
       name: 'OS_Simulator',
       html_url: 'https://github.com/Zaryabghumman2003-debug/OS_Simulator',
-      description: 'EduOS — Interactive browser & Electron operating system simulator built with React & Vite.',
+      description: 'EduOS — Interactive browser & Electron operating system simulator.',
       language: 'TypeScript',
       category: 'AI & Systems',
     },
     {
       name: '-coretech-web-internship',
       html_url: 'https://github.com/Zaryabghumman2003-debug/-coretech-web-internship',
-      description: 'CoreTech Web Development Internship sprint deliverables and responsive UI tasks.',
+      description: 'CoreTech Web Development Internship responsive portfolio deliverables.',
       language: 'HTML',
       category: 'Web & UI',
     },
@@ -514,34 +461,13 @@ export const GITHUB_CONFIG = {
 };
 
 export const SKILLS_DATA = [
-  {
-    category: 'Programming',
-    items: ['Python', 'PHP', 'C++'],
-  },
-  {
-    category: 'Frontend',
-    items: ['HTML', 'CSS', 'JavaScript'],
-  },
-  {
-    category: 'Web & Platforms',
-    items: ['WordPress', 'Firebase'],
-  },
-  {
-    category: 'Databases',
-    items: ['MySQL', 'MongoDB'],
-  },
-  {
-    category: 'Development Tools',
-    items: ['GitHub', 'Oracle APEX'],
-  },
-  {
-    category: 'AI & Computer Vision',
-    items: ['YOLO', 'OpenCV'],
-  },
-  {
-    category: 'Other',
-    items: ['Adobe Photoshop', 'MS Office'],
-  },
+  { category: 'Programming', items: ['Python', 'PHP', 'C++'] },
+  { category: 'Frontend', items: ['HTML', 'CSS', 'JavaScript'] },
+  { category: 'Web & Platforms', items: ['WordPress', 'Firebase'] },
+  { category: 'Databases', items: ['MySQL', 'MongoDB'] },
+  { category: 'Development Tools', items: ['GitHub', 'Oracle APEX'] },
+  { category: 'AI & Computer Vision', items: ['YOLO', 'OpenCV'] },
+  { category: 'Other', items: ['Adobe Photoshop', 'MS Office'] },
 ];
 
 export const EDUCATION_DATA = [
@@ -550,16 +476,12 @@ export const EDUCATION_DATA = [
     degree: 'BS Computer Science',
     period: '2024 – 2028 (Expected)',
     location: 'Karachi, Pakistan',
-    details:
-      'Undergraduate studies in Computer Science alongside active involvement in DUET RPDU and campus technical communities.',
   },
   {
     institution: 'WAPDA Cadet College Tarbela',
     degree: 'Intermediate (Higher Secondary)',
     period: '2021 – 2023',
     location: 'Tarbela, Pakistan',
-    details:
-      'Completed intermediate education in a disciplined cadet college environment, building leadership and analytical foundations.',
   },
 ];
 
@@ -574,18 +496,18 @@ export const ACHIEVEMENTS_DATA = [
     title: 'Participant & Presenter',
     issuer: 'IEEE Expo 2025',
     year: '2025',
-    type: 'Expo & Presentation',
+    type: 'Expo',
   },
   {
     title: 'Certificate of Appreciation',
     issuer: "Procom'26",
     year: '2026',
-    type: 'Recognition',
+    type: 'Award',
   },
   {
     title: 'Volunteer',
     issuer: 'AI International Conference',
-    year: 'Verified CV Entry',
-    type: 'Conference',
+    year: 'Conference',
+    type: 'Community',
   },
 ];
