@@ -7,7 +7,6 @@ import {
   Sparkles,
   BriefcaseBusiness,
   Building2,
-  FolderGit2,
 } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 import { PERSONAL_INFO } from '../data/portfolioData';
@@ -206,21 +205,6 @@ export default function Hero({ onOpenCV }) {
                     </p>
                   </div>
                 </div>
-
-                <a
-                  href="#projects"
-                  className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-sky-400/30 transition-colors"
-                >
-                  <FolderGit2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs font-semibold text-white">
-                      Connected GitHub Portfolio (Zaryabghumman2003-debug)
-                    </p>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      Live repositories synced — Kaamify-Web, Brand-Builder, TaskFlow &amp; more
-                    </p>
-                  </div>
-                </a>
               </div>
 
               <div className="pt-2 flex items-center justify-between text-xs font-mono text-slate-400 border-t border-white/10">

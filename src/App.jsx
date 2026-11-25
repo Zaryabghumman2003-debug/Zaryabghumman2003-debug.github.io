@@ -3,7 +3,6 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import VantraOSSection from './components/VantraOSSection';
-import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import SkillsEducationSection from './components/SkillsEducationSection';
 import ContactSection from './components/ContactSection';
@@ -46,9 +45,6 @@ export default function App() {
         </div>
         <div className="reveal-section">
           <VantraOSSection />
-        </div>
-        <div className="reveal-section">
-          <ProjectsSection />
         </div>
         <div className="reveal-section">
           <ExperienceSection />

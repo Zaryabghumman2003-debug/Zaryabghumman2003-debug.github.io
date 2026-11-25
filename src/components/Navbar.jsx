@@ -5,7 +5,6 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 const NAV_LINKS = [
   { label: 'Services', href: '#services' },
   { label: 'VantraOS', href: '#vantraos' },
-  { label: 'Projects', href: '#projects' },
   { label: 'Experience', href: '#experience' },
   { label: 'Skills', href: '#skills' },
   { label: 'Contact', href: '#contact' },
