@@ -4,10 +4,7 @@ import Hero from './components/Hero';
 import ServicesSection from './components/ServicesSection';
 import VantraOSSection from './components/VantraOSSection';
 import ProjectsSection from './components/ProjectsSection';
-import GitHubReposSection from './components/GitHubReposSection';
-import StartupJourneySection from './components/StartupJourneySection';
 import ExperienceSection from './components/ExperienceSection';
-import AboutSection from './components/AboutSection';
 import SkillsEducationSection from './components/SkillsEducationSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
@@ -54,16 +51,7 @@ export default function App() {
           <ProjectsSection />
         </div>
         <div className="reveal-section">
-          <GitHubReposSection />
-        </div>
-        <div className="reveal-section">
-          <StartupJourneySection />
-        </div>
-        <div className="reveal-section">
           <ExperienceSection />
-        </div>
-        <div className="reveal-section">
-          <AboutSection />
         </div>
         <div className="reveal-section">
           <SkillsEducationSection />

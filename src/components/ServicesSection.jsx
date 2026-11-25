@@ -7,7 +7,7 @@ import {
   Store,
   ArrowRight,
 } from 'lucide-react';
-import { BUSINESS_SERVICES, ENGAGEMENT_MODEL } from '../data/portfolioData';
+import { BUSINESS_SERVICES } from '../data/portfolioData';
 
 const SERVICE_ICONS = {
   'saas-web': Layers,
@@ -19,27 +19,26 @@ const SERVICE_ICONS = {
 export default function ServicesSection() {
   return (
     <section id="services" className="py-16 sm:py-20 border-b border-white/10 bg-[#090b12]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
-          <div className="max-w-xl space-y-2">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+          <div className="space-y-2">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-sky-400">
               <BriefcaseBusiness className="w-3.5 h-3.5" />
-              Business Services
+              Services
             </div>
             <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight">
-              Solutions Built for Business
+              Business Solutions
             </h2>
           </div>
           <a
             href="#contact"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all self-start lg:self-auto"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold transition-all self-start sm:self-auto"
           >
             Request Consultation
             <ArrowRight className="w-4 h-4" />
           </a>
         </div>
 
-        {/* 4 Service Pillars */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {BUSINESS_SERVICES.map((service) => {
             const Icon = SERVICE_ICONS[service.id] || Layers;
@@ -85,35 +84,6 @@ export default function ServicesSection() {
               </div>
             );
           })}
-        </div>
-
-        {/* Compact Engagement Workflow + Models */}
-        <div className="glass-card rounded-2xl p-6 space-y-6">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {ENGAGEMENT_MODEL.steps.map((s) => (
-              <div key={s.step} className="space-y-1">
-                <span className="text-xs font-mono text-sky-300">{s.step} &bull; {s.title}</span>
-                <p className="text-xs text-slate-300 leading-relaxed">{s.detail}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4 pt-4 border-t border-white/10">
-            {ENGAGEMENT_MODEL.models.map((m) => (
-              <div
-                key={m.name}
-                className="p-3.5 rounded-xl bg-indigo-500/[0.06] border border-indigo-400/20 flex items-start justify-between gap-3"
-              >
-                <div>
-                  <h4 className="text-sm font-semibold text-white">{m.name}</h4>
-                  <p className="text-xs text-slate-300 mt-0.5">{m.detail}</p>
-                </div>
-                <span className="shrink-0 text-[10px] font-mono px-2 py-0.5 rounded bg-indigo-500/20 text-indigo-200">
-                  {m.tag}
-                </span>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>

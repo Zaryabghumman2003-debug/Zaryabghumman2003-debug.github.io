@@ -208,7 +208,7 @@ export default function Hero({ onOpenCV }) {
                 </div>
 
                 <a
-                  href="#github"
+                  href="#projects"
                   className="flex items-start gap-3 p-3.5 rounded-xl bg-white/[0.03] border border-white/5 hover:border-sky-400/30 transition-colors"
                 >
                   <FolderGit2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />

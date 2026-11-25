@@ -28,7 +28,6 @@ export default function VantraOSSection() {
   return (
     <section id="vantraos" className="py-16 sm:py-20 relative border-b border-white/10">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        {/* Header */}
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-4">
           <div className="space-y-2 max-w-2xl">
             <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-indigo-300">
@@ -54,7 +53,6 @@ export default function VantraOSSection() {
           </a>
         </div>
 
-        {/* Overview Card + Interactive Module Showcase */}
         <div className="grid lg:grid-cols-12 gap-6 items-stretch">
           <div className="lg:col-span-5 glass-card rounded-2xl p-6 flex flex-col justify-between space-y-5">
             <div className="space-y-4">
@@ -170,16 +168,6 @@ export default function VantraOSSection() {
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Compact 3 Perspectives */}
-        <div className="grid md:grid-cols-3 gap-5">
-          {VANTRAOS_DATA.perspectives.map((item) => (
-            <div key={item.title} className="glass-card rounded-xl p-5 space-y-1.5">
-              <h3 className="text-base font-semibold text-white">{item.title}</h3>
-              <p className="text-xs text-slate-300 leading-relaxed">{item.detail}</p>
-            </div>
-          ))}
         </div>
       </div>
     </section>
