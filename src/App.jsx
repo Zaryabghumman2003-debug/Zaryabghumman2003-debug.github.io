@@ -36,7 +36,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#07080d] text-slate-200 flex flex-col">
+    <div className="min-h-screen bg-[#06070c] bg-noise text-slate-200 flex flex-col">
       <Navbar onOpenCV={() => setCvOpen(true)} />
       <main className="flex-1">
         <Hero onOpenCV={() => setCvOpen(true)} />

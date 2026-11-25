@@ -4,18 +4,21 @@ import {
   ArrowUpRight,
   FileDown,
   MapPin,
-  Sparkles,
-  BriefcaseBusiness,
   Building2,
+  BriefcaseBusiness,
 } from 'lucide-react';
 import { GitHubIcon, LinkedInIcon } from './SocialIcons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
-const BADGE_STYLES = {
-  indigo: 'border-indigo-400/30 bg-indigo-500/10 text-indigo-200',
-  sky: 'border-sky-400/30 bg-sky-500/10 text-sky-200',
-  violet: 'border-violet-400/30 bg-violet-500/10 text-violet-200',
-};
+const CREDENTIAL_RIBBON = [
+  'VantraOS — Core Team',
+  'NASTP Ecosystem',
+  'DUET RPDU Office',
+  'Full-Stack SaaS & Web',
+  'AI & Computer Vision',
+  'Next.js • React • Python',
+  'Karachi, Pakistan',
+];
 
 export default function Hero({ onOpenCV }) {
   const [focusIdx, setFocusIdx] = useState(0);
@@ -32,65 +35,63 @@ export default function Hero({ onOpenCV }) {
   return (
     <section
       id="top"
-      className="relative pt-28 pb-20 sm:pt-36 sm:pb-28 overflow-hidden bg-grid-pattern border-b border-white/10"
+      className="relative pt-28 sm:pt-36 overflow-hidden bg-architectural-grid border-b border-white/10"
     >
+      {/* Ambient Executive Spotlight */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] rounded-full bg-indigo-600/15 blur-[130px]"
+        className="pointer-events-none absolute -top-24 left-1/4 w-[620px] h-[420px] rounded-full bg-indigo-600/14 blur-[140px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute top-1/3 right-0 w-[420px] h-[420px] rounded-full bg-sky-500/10 blur-[120px]"
+        className="pointer-events-none absolute top-20 right-10 w-[440px] h-[440px] rounded-full bg-sky-500/10 blur-[140px]"
       />
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
-          {/* Left Business Positioning */}
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-16 sm:pb-20">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          {/* Left Editorial Column */}
           <div className="lg:col-span-7 space-y-7">
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-white/10 bg-white/[0.04] text-xs font-mono text-slate-300">
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full border border-white/12 bg-white/[0.03] backdrop-blur-md text-xs font-mono text-slate-300">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-400" />
               </span>
-              <span className="text-slate-400">Solutions Focus:</span>
-              <span
-                key={focusIdx}
-                className="text-sky-300 font-medium transition-opacity duration-500"
-              >
+              <span className="text-slate-400">Focus:</span>
+              <span key={focusIdx} className="text-sky-300 font-medium">
                 {focuses[focusIdx]}
               </span>
             </div>
 
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-white leading-[1.08]">
+              <h1 className="text-4xl sm:text-5xl lg:text-[3.65rem] font-bold tracking-[-0.03em] text-white leading-[1.05]">
                 Building Technology.{' '}
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-sky-300 to-violet-300">
+                <span className="font-editorial italic font-normal text-[1.12em] text-transparent bg-clip-text bg-gradient-to-r from-indigo-300 via-sky-200 to-violet-200 pr-1">
                   Leading Innovation.
                 </span>{' '}
                 Creating Impact.
               </h1>
-              <p className="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg text-slate-300/90 leading-relaxed max-w-xl">
                 {PERSONAL_INFO.hero.subheading}
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-2.5">
+            {/* Identity Tags */}
+            <div className="flex flex-wrap gap-2">
               {PERSONAL_INFO.hero.identityLabels.map((item) => (
                 <span
                   key={item.label}
-                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border text-xs font-medium ${BADGE_STYLES[item.accent]}`}
+                  className="px-3 py-1 rounded-full border border-white/10 bg-white/[0.03] text-xs font-medium text-slate-200"
                 >
-                  <Sparkles className="w-3.5 h-3.5 opacity-80" />
                   {item.label}
                 </span>
               ))}
             </div>
 
-            {/* Business-First CTA Row */}
+            {/* Executive Action Bar */}
             <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-semibold shadow-lg shadow-indigo-600/25 transition-all"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-950 text-sm font-semibold shadow-[0_12px_32px_-10px_rgba(255,255,255,0.35)] transition-all"
               >
                 Start a Business Project
                 <ArrowRight className="w-4 h-4" />
@@ -116,124 +117,115 @@ export default function Hero({ onOpenCV }) {
               <button
                 type="button"
                 onClick={onOpenCV}
-                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-white/10 hover:border-white/25 text-slate-200 hover:text-white text-sm font-medium transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 px-4 py-3 rounded-xl border border-white/10 hover:border-white/25 text-slate-300 hover:text-white text-sm font-medium transition-all cursor-pointer"
               >
                 <FileDown className="w-4 h-4 text-indigo-400" />
-                Download CV
+                CV
               </button>
             </div>
 
-            <div className="flex flex-wrap items-center gap-5 pt-2 text-sm text-slate-400">
+            {/* Social & Location */}
+            <div className="flex flex-wrap items-center gap-5 pt-2 text-xs font-mono text-slate-400">
               <span className="inline-flex items-center gap-1.5">
-                <MapPin className="w-4 h-4 text-indigo-400" />
+                <MapPin className="w-3.5 h-3.5 text-indigo-400" />
                 {PERSONAL_INFO.location}
               </span>
-              <span className="h-4 w-px bg-white/10 hidden sm:inline-block" />
-              <div className="flex items-center gap-4">
-                <a
-                  href={PERSONAL_INFO.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
-                >
-                  <LinkedInIcon className="w-4 h-4 text-sky-400" />
-                  LinkedIn
-                </a>
-                <a
-                  href={PERSONAL_INFO.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
-                >
-                  <GitHubIcon className="w-4 h-4 text-indigo-300" />
-                  GitHub
-                </a>
-              </div>
+              <span className="h-3.5 w-px bg-white/10 hidden sm:inline-block" />
+              <a
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+              >
+                <LinkedInIcon className="w-3.5 h-3.5 text-sky-400" />
+                LinkedIn
+              </a>
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors"
+              >
+                <GitHubIcon className="w-3.5 h-3.5 text-indigo-300" />
+                GitHub
+              </a>
             </div>
           </div>
 
-          {/* Right Business Portrait & Profile Card */}
+          {/* Right Bespoke Framed Portrait Card */}
           <div className="lg:col-span-5">
-            <div className="glass-card rounded-2xl p-6 sm:p-7 space-y-5 relative overflow-hidden">
-              <div
-                aria-hidden="true"
-                className="absolute -top-16 -right-16 w-44 h-44 rounded-full bg-indigo-500/15 blur-2xl"
-              />
-
-              {/* Portrait Frame */}
-              <div className="relative rounded-xl overflow-hidden border border-white/10 bg-[#090c14] h-80 sm:h-[340px] flex items-center justify-center">
-                {!photoMissing ? (
-                  <img
-                    src={PERSONAL_INFO.photoUrl}
-                    alt={`${PERSONAL_INFO.name} portrait`}
-                    onError={() => setPhotoMissing(true)}
-                    className="w-full h-full object-cover object-[50%_15%]"
-                  />
-                ) : (
-                  <div className="flex flex-col items-center justify-center text-center p-6 space-y-2">
-                    <div className="w-20 h-20 rounded-full bg-gradient-to-br from-indigo-500/25 to-sky-500/25 border border-indigo-400/40 flex items-center justify-center font-display font-bold text-2xl text-white">
-                      ZG
+            <div className="relative p-2 rounded-[26px] bg-gradient-to-b from-white/15 via-white/5 to-transparent shadow-[0_32px_80px_-24px_rgba(79,70,229,0.28)]">
+              <div className="rounded-[20px] bg-[#090c14] overflow-hidden border border-white/10">
+                <div className="relative h-80 sm:h-[380px] overflow-hidden bg-[#080b12]">
+                  {!photoMissing ? (
+                    <img
+                      src={PERSONAL_INFO.photoUrl}
+                      alt={`${PERSONAL_INFO.name} portrait`}
+                      onError={() => setPhotoMissing(true)}
+                      className="w-full h-full object-cover object-[50%_15%] scale-[1.01]"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <div className="w-24 h-24 rounded-full bg-indigo-500/20 border border-indigo-400/40 flex items-center justify-center font-display font-bold text-3xl text-white">
+                        ZG
+                      </div>
                     </div>
-                    <p className="text-xs font-medium text-slate-300">
-                      Add your portrait at <code className="text-sky-300 font-mono">public/profile.jpg</code>
-                    </p>
-                  </div>
-                )}
-                <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#07080d]/85 backdrop-blur-md border border-emerald-400/30 text-[11px] font-mono text-emerald-300">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                  Open for B2B
-                </span>
-              </div>
+                  )}
 
-              <div className="flex items-start justify-between gap-4 border-b border-white/10 pb-4">
-                <div>
-                  <h2 className="text-xl font-bold text-white">
-                    {PERSONAL_INFO.name}
-                  </h2>
-                  <p className="text-xs text-slate-400 mt-1">
-                    {PERSONAL_INFO.title}
-                  </p>
-                </div>
-              </div>
+                  {/* Subtle cinematic bottom vignette */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#090c14] via-[#090c14]/20 to-transparent"
+                  />
 
-              <div className="space-y-2.5">
-                <div className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                  <Building2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs font-semibold text-white">
-                      VantraOS — Software Developer &amp; Core Team Member
+                  <span className="absolute top-3.5 right-3.5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#06070c]/80 backdrop-blur-md border border-emerald-400/30 text-[11px] font-mono text-emerald-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                    Available for B2B
+                  </span>
+
+                  {/* Floating Identity Overlay */}
+                  <div className="absolute inset-x-4 bottom-4">
+                    <p className="text-lg font-bold text-white tracking-tight">
+                      {PERSONAL_INFO.name}
                     </p>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      NASTP / DUET RPDU
+                    <p className="text-xs text-sky-300 font-mono mt-0.5">
+                      Software Developer &bull; VantraOS
                     </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3 p-3 rounded-xl bg-white/[0.03] border border-white/5">
-                  <BriefcaseBusiness className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
-                  <div>
-                    <p className="text-xs font-semibold text-white">
-                      Custom Web, Marketplaces &amp; AI Delivery
-                    </p>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      Next.js, React, Python, PHP, MySQL &amp; MongoDB
-                    </p>
+                {/* Compact Executive Footer Strip */}
+                <div className="p-4 grid grid-cols-2 gap-2.5 bg-[#090c14] border-t border-white/10">
+                  <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-start gap-2.5">
+                    <Building2 className="w-4 h-4 text-sky-400 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-[11px] font-semibold text-white">VantraOS</p>
+                      <p className="text-[10px] font-mono text-slate-400">NASTP / DUET RPDU</p>
+                    </div>
+                  </div>
+                  <div className="p-3 rounded-xl bg-white/[0.03] border border-white/[0.06] flex items-start gap-2.5">
+                    <BriefcaseBusiness className="w-4 h-4 text-indigo-400 shrink-0 mt-0.5" />
+                    <div>
+                      <p className="text-[11px] font-semibold text-white">Solutions</p>
+                      <p className="text-[10px] font-mono text-slate-400">Web, SaaS &amp; AI</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="pt-2 flex items-center justify-between text-xs font-mono text-slate-400 border-t border-white/10">
-                <span>Karachi, Pakistan</span>
-                <a
-                  href="#services"
-                  className="text-indigo-300 hover:text-indigo-200 inline-flex items-center gap-1"
-                >
-                  View Services
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </a>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Subtle Executive Credential Ribbon */}
+      <div className="border-t border-white/[0.07] bg-[#070910]/80 backdrop-blur-md py-3.5 overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]">
+        <div className="animate-marquee flex items-center gap-10 text-xs font-mono uppercase tracking-[0.18em] text-slate-400">
+          {[...CREDENTIAL_RIBBON, ...CREDENTIAL_RIBBON].map((item, i) => (
+            <span key={`${item}-${i}`} className="inline-flex items-center gap-10 whitespace-nowrap">
+              <span>{item}</span>
+              <span className="w-1 h-1 rounded-full bg-indigo-400/60" />
+            </span>
+          ))}
         </div>
       </div>
     </section>

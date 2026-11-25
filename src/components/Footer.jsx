@@ -4,14 +4,12 @@ import { PERSONAL_INFO } from '../data/portfolioData';
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 bg-[#07080d] py-10">
+    <footer className="border-t border-white/10 bg-[#06070c] py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
-        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+        <div className="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
           <span className="font-semibold text-white">{PERSONAL_INFO.name}</span>
-          <span className="hidden sm:inline text-slate-600">&bull;</span>
-          <span>Software Developer &amp; Core Team Member at VantraOS</span>
-          <span className="hidden sm:inline text-slate-600">&bull;</span>
-          <span>{PERSONAL_INFO.location}</span>
+          <span className="hidden sm:inline text-slate-700">&bull;</span>
+          <span className="font-mono text-[11px]">VantraOS &bull; {PERSONAL_INFO.location}</span>
         </div>
 
         <div className="flex items-center gap-4">
@@ -19,7 +17,7 @@ export default function Footer() {
             href={PERSONAL_INFO.vantraosUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-sky-300 hover:text-sky-200"
+            className="inline-flex items-center gap-1 text-sky-300 hover:text-white transition-colors"
           >
             VantraOS
             <ArrowUpRight className="w-3.5 h-3.5" />
